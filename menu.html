@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Jay Garden Chinese Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body class="menu-page">
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#x9F99;</span>
+        <span class="logo-text">Jay Garden</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="menu.html" class="active-link">Menu</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="menu-page-header">
+    <div class="menu-page-header-overlay"></div>
+    <div class="menu-page-header-content">
+      <p class="section-label">Jay Garden</p>
+      <h1>Our Full Menu</h1>
+      <p>Dine-in &amp; Take-out &nbsp;|&nbsp; Call to order: 850-675-5551</p>
+    </div>
+  </div>
+
+  <div class="menu-body">
+
+    <!-- SIDEBAR -->
+    <aside class="menu-sidebar" id="menu-sidebar">
+      <button class="sidebar-close" id="sidebar-close">&#10005;</button>
+      <p class="sidebar-title">Categories</p>
+      <ul class="sidebar-nav">
+        <li><button class="sidebar-btn active" data-filter="all">&#128218; All Items</button></li>
+        <li><button class="sidebar-btn" data-filter="new">&#127381; New</button></li>
+        <li><button class="sidebar-btn" data-filter="house-specials">&#11088; House Specials</button></li>
+        <li><button class="sidebar-btn" data-filter="appetizers">&#127836; Appetizers</button></li>
+        <li><button class="sidebar-btn" data-filter="soup">&#129379; Soup</button></li>
+        <li><button class="sidebar-btn" data-filter="fried-rice">&#127859; Fried Rice</button></li>
+        <li><button class="sidebar-btn" data-filter="chow-mein">&#127837; Chow Mein</button></li>
+        <li><button class="sidebar-btn" data-filter="lo-mein">&#127837; Lo Mein</button></li>
+        <li><button class="sidebar-btn" data-filter="chow-mei-fun">&#127837; Chow Mei Fun</button></li>
+        <li><button class="sidebar-btn" data-filter="sweet-sour">&#127826; Sweet &amp; Sour</button></li>
+        <li><button class="sidebar-btn" data-filter="egg-foo-young">&#129370; Egg Foo Young</button></li>
+        <li><button class="sidebar-btn" data-filter="chicken">&#127831; Chicken</button></li>
+        <li><button class="sidebar-btn" data-filter="pork">&#129385; Pork</button></li>
+        <li><button class="sidebar-btn" data-filter="seafood">&#129424; Seafood</button></li>
+        <li><button class="sidebar-btn" data-filter="beef">&#129385; Beef</button></li>
+        <li><button class="sidebar-btn" data-filter="vegetable">&#129367; Vegetable</button></li>
+        <li><button class="sidebar-btn" data-filter="diet-food">&#129382; Diet Food</button></li>
+        <li><button class="sidebar-btn" data-filter="chefs-special">&#11088; Chef's Special</button></li>
+        <li><button class="sidebar-btn" data-filter="szechuan-special">&#128293; Szechuan Special</button></li>
+        <li><button class="sidebar-btn" data-filter="kids-meals">&#128057; Kids Meals</button></li>
+        <li><button class="sidebar-btn" data-filter="family-meals">&#128106; Family Meals</button></li>
+        <li><button class="sidebar-btn" data-filter="side-orders">&#127860; Side Orders</button></li>
+        <li><button class="sidebar-btn" data-filter="lunch-combo">&#127828; Lunch &amp; Combo</button></li>
+      </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="menu-main">
+
+      <div class="search-wrap">
+        <span class="search-icon">&#128269;</span>
+        <input type="text" id="menu-search" class="search-input" placeholder="Search the menu..." autocomplete="off" />
+        <button class="search-clear" id="search-clear" aria-label="Clear search">&#10005;</button>
+      </div>
+
+      <button class="sidebar-toggle" id="sidebar-toggle">&#9776; Categories</button>
+      <div class="no-results" id="no-results"><p>&#128532; No items found. Try a different search.</p></div>
+
+      <!-- ===== NEW ===== -->
+      <section class="menu-category" id="cat-new">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127381;</span>
+          <h2>New</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="new" data-name="spicy szechuan chili dumplings" data-desc="spicy szechuan chili dumplings handmade filled pork szechuan pepper chili oil">
+            <div class="menu-row-left">
+              <h3>Spicy Szechuan Chili Dumplings <span class="qty">(10)</span></h3>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$7.50</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== HOUSE SPECIAL DELICIOUS ===== -->
+      <section class="menu-category" id="cat-house-specials">
+        <div class="category-heading">
+          <span class="cat-emoji">&#11088;</span>
+          <h2>House Special Delicious</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="house-specials" data-name="fried chicken wings" data-desc="crispy fried chicken wings">
+            <div class="menu-row-left"><h3>Fried Chicken Wings <span class="qty">(4)</span></h3></div>
+            <span class="price">$8.45</span>
+          </div>
+          <div class="menu-row" data-category="house-specials" data-name="fried shrimp" data-desc="crispy fried shrimp">
+            <div class="menu-row-left"><h3>Fried Shrimp <span class="qty">(15)</span></h3></div>
+            <span class="price">$7.25</span>
+          </div>
+          <div class="menu-row" data-category="house-specials" data-name="fried crab meat" data-desc="crispy fried crab meat">
+            <div class="menu-row-left"><h3>Fried Crab Meat <span class="qty">(5)</span></h3></div>
+            <span class="price">$6.99</span>
+          </div>
+          <div class="menu-row" data-category="house-specials" data-name="french fries" data-desc="french fries">
+            <div class="menu-row-left"><h3>French Fries</h3></div>
+            <span class="price">$4.19</span>
+          </div>
+          <div class="menu-row" data-category="house-specials" data-name="crab rangoon" data-desc="crispy crab rangoon">
+            <div class="menu-row-left"><h3>Crab Rangoon <span class="qty">(8)</span></h3></div>
+            <span class="price">$5.99</span>
+          </div>
+          <div class="menu-row" data-category="house-specials" data-name="cheese sticks" data-desc="fried cheese sticks">
+            <div class="menu-row-left"><h3>Cheese Sticks <span class="qty">(8)</span></h3></div>
+            <span class="price">$6.59</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== APPETIZERS ===== -->
+      <section class="menu-category" id="cat-appetizers">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127836;</span>
+          <h2>Appetizers</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="appetizers" data-name="spring roll" data-desc="crispy spring rolls">
+            <div class="menu-row-left"><h3>Spring Roll <span class="qty">(3)</span></h3></div>
+            <span class="price">$3.50</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="egg roll" data-desc="golden fried egg roll">
+            <div class="menu-row-left"><h3>Egg Roll <span class="qty">(each)</span></h3></div>
+            <span class="price">$1.65</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="fried pork wonton" data-desc="crispy fried pork wontons">
+            <div class="menu-row-left"><h3>Fried Pork Wonton <span class="qty">(10 pcs)</span></h3></div>
+            <span class="price">$5.50</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="steamed or fried dumplings" data-desc="steamed or fried dumplings with pork filling">
+            <div class="menu-row-left"><h3>Steamed or Fried Dumplings <span class="qty">(10)</span></h3></div>
+            <span class="price">$6.75</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="shrimp toast" data-desc="crispy shrimp toast">
+            <div class="menu-row-left"><h3>Shrimp Toast <span class="qty">(4)</span></h3></div>
+            <span class="price">$4.99</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="teriyaki chicken" data-desc="teriyaki glazed chicken on skewer">
+            <div class="menu-row-left"><h3>Teriyaki Chicken <span class="qty">(4)</span></h3></div>
+            <span class="price">$6.50</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="boneless spare ribs" data-desc="BBQ boneless spare ribs">
+            <div class="menu-row-left">
+              <h3>Boneless Spare Ribs</h3>
+            </div>
+            <span class="price">S $8.39 / L $13.99</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="pu pu platter" data-desc="pu pu platter for two spring roll shrimp toast teriyaki fried wonton egg roll chicken wings">
+            <div class="menu-row-left">
+              <h3>Pu Pu Platter <span class="qty">(for 2)</span></h3>
+              <p>Spring roll, shrimp toast, teriyaki, fried wonton, egg roll, chicken on stick, chicken wings.</p>
+            </div>
+            <span class="price">$15.99</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="donuts" data-desc="fried donuts">
+            <div class="menu-row-left"><h3>Donuts <span class="qty">(4)</span></h3></div>
+            <span class="price">$5.25</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="fried scallops" data-desc="crispy fried scallops">
+            <div class="menu-row-left"><h3>Fried Scallops <span class="qty">(12)</span></h3></div>
+            <span class="price">$5.25</span>
+          </div>
+          <div class="menu-row" data-category="appetizers" data-name="crab meat with bacon" data-desc="crab meat wrapped with bacon">
+            <div class="menu-row-left"><h3>Crab Meat w. Bacon</h3></div>
+            <span class="price">$5.99</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SOUP ===== -->
+      <section class="menu-category" id="cat-soup">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129379;</span>
+          <h2>Soup <span class="cat-note">w. Crispy Noodles</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="soup" data-name="wonton soup" data-desc="pork wontons in clear broth">
+            <div class="menu-row-left"><h3>Wonton Soup</h3></div>
+            <span class="price">Pt $3.34 / Qt $4.75</span>
+          </div>
+          <div class="menu-row" data-category="soup" data-name="egg drop soup" data-desc="silky egg ribbons in broth">
+            <div class="menu-row-left"><h3>Egg Drop Soup</h3></div>
+            <span class="price">Pt $2.90 / Qt $4.45</span>
+          </div>
+          <div class="menu-row" data-category="soup" data-name="wonton egg drop soup" data-desc="wonton and egg drop combined soup">
+            <div class="menu-row-left"><h3>Wonton Egg Drop Soup</h3></div>
+            <span class="price">Pt $3.60 / Qt $5.25</span>
+          </div>
+          <div class="menu-row" data-category="soup" data-name="chicken noodle soup rice soup" data-desc="chicken noodle or rice soup">
+            <div class="menu-row-left"><h3>Chicken Noodle Soup or Rice Soup</h3></div>
+            <span class="price">Pt $3.60 / Qt $4.85</span>
+          </div>
+          <div class="menu-row" data-category="soup" data-name="hot and sour soup" data-desc="spicy tangy sichuan soup tofu mushrooms bamboo">
+            <div class="menu-row-left">
+              <h3>Hot &amp; Sour Soup</h3>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">Pt $3.95 / Qt $6.49</span>
+          </div>
+          <div class="menu-row" data-category="soup" data-name="house special soup" data-desc="house special soup">
+            <div class="menu-row-left"><h3>House Special Soup</h3></div>
+            <span class="price">$9.49</span>
+          </div>
+          <div class="menu-row" data-category="soup" data-name="fresh vegetable soup" data-desc="fresh vegetable soup">
+            <div class="menu-row-left"><h3>Fresh Vegetable Soup</h3></div>
+            <span class="price">Pt $3.39 / Qt $4.85</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== FRIED RICE ===== -->
+      <section class="menu-category" id="cat-fried-rice">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127859;</span>
+          <h2>Fried Rice</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="fried-rice" data-name="chicken fried rice" data-desc="wok fried rice with chicken egg scallions">
+            <div class="menu-row-left"><h3>Chicken Fried Rice</h3></div>
+            <span class="price">Pt $6.79 / Qt $10.49</span>
+          </div>
+          <div class="menu-row" data-category="fried-rice" data-name="roast pork fried rice" data-desc="wok fried rice with roast pork egg scallions">
+            <div class="menu-row-left"><h3>Roast Pork Fried Rice</h3></div>
+            <span class="price">Pt $6.79 / Qt $10.49</span>
+          </div>
+          <div class="menu-row" data-category="fried-rice" data-name="shrimp fried rice" data-desc="wok fried rice with shrimp egg scallions">
+            <div class="menu-row-left"><h3>Shrimp Fried Rice</h3></div>
+            <span class="price">Pt $7.59 / Qt $11.00</span>
+          </div>
+          <div class="menu-row" data-category="fried-rice" data-name="beef fried rice" data-desc="wok fried rice with beef egg scallions">
+            <div class="menu-row-left"><h3>Beef Fried Rice</h3></div>
+            <span class="price">Pt $7.59 / Qt $11.00</span>
+          </div>
+          <div class="menu-row" data-category="fried-rice" data-name="vegetable fried rice" data-desc="wok fried rice with mixed vegetables">
+            <div class="menu-row-left"><h3>Vegetable Fried Rice</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">Pt $5.99 / Qt $9.49</span>
+          </div>
+          <div class="menu-row" data-category="fried-rice" data-name="house special fried rice" data-desc="wok fried rice with chicken shrimp pork beef egg">
+            <div class="menu-row-left"><h3>House Special Fried Rice</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $7.45 / Qt $11.75</span>
+          </div>
+          <div class="menu-row" data-category="fried-rice" data-name="young chow fried rice" data-desc="young chow style fried rice with shrimp pork egg">
+            <div class="menu-row-left"><h3>Young Chow Fried Rice</h3></div>
+            <span class="price">$11.75</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CHOW MEIN ===== -->
+      <section class="menu-category" id="cat-chow-mein">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127837;</span>
+          <h2>Chow Mein <span class="cat-note">w. Crispy Noodles</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="chow-mein" data-name="chicken chow mein" data-desc="chicken stir fried with crispy noodles vegetables">
+            <div class="menu-row-left"><h3>Chicken Chow Mein</h3></div>
+            <span class="price">Pt $7.79 / Qt $10.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mein" data-name="roast pork chow mein" data-desc="roast pork stir fried with crispy noodles vegetables">
+            <div class="menu-row-left"><h3>Roast Pork Chow Mein</h3></div>
+            <span class="price">Pt $7.79 / Qt $10.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mein" data-name="shrimp chow mein" data-desc="shrimp stir fried with crispy noodles vegetables">
+            <div class="menu-row-left"><h3>Shrimp Chow Mein</h3></div>
+            <span class="price">Pt $7.99 / Qt $11.25</span>
+          </div>
+          <div class="menu-row" data-category="chow-mein" data-name="beef chow mein" data-desc="beef stir fried with crispy noodles vegetables">
+            <div class="menu-row-left"><h3>Beef Chow Mein</h3></div>
+            <span class="price">Pt $7.99 / Qt $11.25</span>
+          </div>
+          <div class="menu-row" data-category="chow-mein" data-name="vegetable chow mein" data-desc="vegetables stir fried with crispy noodles">
+            <div class="menu-row-left"><h3>Vegetable Chow Mein</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">Pt $6.59 / Qt $9.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mein" data-name="house special chow mein" data-desc="house special chow mein chicken shrimp pork beef">
+            <div class="menu-row-left"><h3>House Special Chow Mein</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $8.29 / Qt $11.55</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== LO MEIN ===== -->
+      <section class="menu-category" id="cat-lo-mein">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127837;</span>
+          <h2>Lo Mein <span class="cat-note">Soft Noodle</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="lo-mein" data-name="chicken lo mein" data-desc="soft egg noodles with chicken vegetables soy sesame">
+            <div class="menu-row-left"><h3>Chicken Lo Mein</h3></div>
+            <span class="price">Pt $7.75 / Qt $11.29</span>
+          </div>
+          <div class="menu-row" data-category="lo-mein" data-name="roast pork lo mein" data-desc="soft egg noodles with roast pork vegetables">
+            <div class="menu-row-left"><h3>Roast Pork Lo Mein</h3></div>
+            <span class="price">Pt $7.75 / Qt $11.29</span>
+          </div>
+          <div class="menu-row" data-category="lo-mein" data-name="shrimp lo mein" data-desc="soft egg noodles with shrimp vegetables">
+            <div class="menu-row-left"><h3>Shrimp Lo Mein</h3></div>
+            <span class="price">Pt $7.99 / Qt $11.99</span>
+          </div>
+          <div class="menu-row" data-category="lo-mein" data-name="beef lo mein" data-desc="soft egg noodles with beef vegetables">
+            <div class="menu-row-left"><h3>Beef Lo Mein</h3></div>
+            <span class="price">Pt $7.99 / Qt $11.99</span>
+          </div>
+          <div class="menu-row" data-category="lo-mein" data-name="house special lo mein" data-desc="soft egg noodles with chicken shrimp pork beef vegetables">
+            <div class="menu-row-left"><h3>House Special Lo Mein</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $7.99 / Qt $12.50</span>
+          </div>
+          <div class="menu-row" data-category="lo-mein" data-name="vegetable lo mein" data-desc="soft egg noodles with mixed vegetables">
+            <div class="menu-row-left"><h3>Vegetable Lo Mein</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">Pt $6.69 / Qt $10.50</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CHOW MEI FUN ===== -->
+      <section class="menu-category" id="cat-chow-mei-fun">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127837;</span>
+          <h2>Chow Mei Fun <span class="cat-note">Rice Noodle</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="chow-mei-fun" data-name="chicken chow mai fun" data-desc="rice noodle stir fried with chicken">
+            <div class="menu-row-left"><h3>Chicken Chow Mai Fun</h3></div>
+            <span class="price">$10.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mei-fun" data-name="shrimp chow mai fun" data-desc="rice noodle stir fried with shrimp">
+            <div class="menu-row-left"><h3>Shrimp Chow Mai Fun</h3></div>
+            <span class="price">$10.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mei-fun" data-name="roast pork chow mai fun" data-desc="rice noodle stir fried with roast pork">
+            <div class="menu-row-left"><h3>Roast Pork Chow Mai Fun</h3></div>
+            <span class="price">$10.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mei-fun" data-name="moo goo chow mai fun" data-desc="rice noodle stir fried moo goo style mushrooms">
+            <div class="menu-row-left"><h3>Moo Goo Chow Mai Fun</h3></div>
+            <span class="price">$11.19</span>
+          </div>
+          <div class="menu-row" data-category="chow-mei-fun" data-name="beef chow mai fun" data-desc="rice noodle stir fried with beef">
+            <div class="menu-row-left"><h3>Beef Chow Mai Fun</h3></div>
+            <span class="price">$11.19</span>
+          </div>
+          <div class="menu-row" data-category="chow-mei-fun" data-name="house special chow mai fun" data-desc="rice noodle stir fried house special chicken shrimp pork beef">
+            <div class="menu-row-left"><h3>House Special Chow Mai Fun</h3><span class="tag popular">Popular</span></div>
+            <span class="price">$11.99</span>
+          </div>
+          <div class="menu-row" data-category="chow-mei-fun" data-name="vegetable chow mai fun" data-desc="rice noodle stir fried with vegetables">
+            <div class="menu-row-left"><h3>Vegetable Chow Mai Fun</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">$10.59</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SWEET & SOUR ===== -->
+      <section class="menu-category" id="cat-sweet-sour">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127826;</span>
+          <h2>Sweet &amp; Sour <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="sweet-sour" data-name="sweet and sour chicken" data-desc="crispy chicken in sweet sour sauce with pineapple peppers">
+            <div class="menu-row-left"><h3>Sweet &amp; Sour Chicken</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $7.85 / Qt $12.68</span>
+          </div>
+          <div class="menu-row" data-category="sweet-sour" data-name="sweet and sour pork" data-desc="crispy pork in sweet sour sauce with pineapple peppers">
+            <div class="menu-row-left"><h3>Sweet &amp; Sour Pork</h3></div>
+            <span class="price">Pt $7.85 / Qt $12.68</span>
+          </div>
+          <div class="menu-row" data-category="sweet-sour" data-name="sweet and sour shrimp" data-desc="crispy shrimp in sweet sour sauce with pineapple peppers">
+            <div class="menu-row-left"><h3>Sweet &amp; Sour Shrimp</h3></div>
+            <span class="price">Pt $8.99 / Qt $13.68</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== EGG FOO YOUNG ===== -->
+      <section class="menu-category" id="cat-egg-foo-young">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129370;</span>
+          <h2>Egg Foo Young</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="egg-foo-young" data-name="chicken egg foo young" data-desc="fluffy egg omelette patties with chicken in gravy">
+            <div class="menu-row-left"><h3>Chicken Egg Foo Young</h3></div>
+            <span class="price">$10.68</span>
+          </div>
+          <div class="menu-row" data-category="egg-foo-young" data-name="roast pork egg foo young" data-desc="fluffy egg omelette patties with roast pork in gravy">
+            <div class="menu-row-left"><h3>Roast Pork Egg Foo Young</h3></div>
+            <span class="price">$10.68</span>
+          </div>
+          <div class="menu-row" data-category="egg-foo-young" data-name="shrimp egg foo young" data-desc="fluffy egg omelette patties with shrimp in gravy">
+            <div class="menu-row-left"><h3>Shrimp Egg Foo Young</h3></div>
+            <span class="price">$11.39</span>
+          </div>
+          <div class="menu-row" data-category="egg-foo-young" data-name="beef egg foo young" data-desc="fluffy egg omelette patties with beef in gravy">
+            <div class="menu-row-left"><h3>Beef Egg Foo Young</h3></div>
+            <span class="price">$11.39</span>
+          </div>
+          <div class="menu-row" data-category="egg-foo-young" data-name="vegetable egg foo young" data-desc="fluffy egg omelette patties with vegetables in gravy">
+            <div class="menu-row-left"><h3>Vegetable Egg Foo Young</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">$9.68</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CHICKEN ===== -->
+      <section class="menu-category" id="cat-chicken">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127831;</span>
+          <h2>Chicken <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="chicken" data-name="chicken with broccoli" data-desc="chicken and broccoli in oyster garlic sauce">
+            <div class="menu-row-left"><h3>Chicken w. Broccoli</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="garlic chicken" data-desc="stir fried chicken with garlic sauce">
+            <div class="menu-row-left"><h3>Garlic Chicken</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="moo goo gai pan" data-desc="sliced chicken with mushrooms snow peas vegetables white sauce">
+            <div class="menu-row-left"><h3>Moo Goo Gai Pan</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="chicken with garlic sauce" data-desc="stir fried chicken vegetables bold spicy garlic sauce">
+            <div class="menu-row-left"><h3>Chicken w. Garlic Sauce</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="curry chicken with onion" data-desc="chicken with onion in curry sauce">
+            <div class="menu-row-left"><h3>Curry Chicken w. Onion</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="kung po chicken" data-desc="stir fried chicken peanuts dried chilies savory spicy sauce">
+            <div class="menu-row-left"><h3>Kung Po Chicken</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="szechuan chicken" data-desc="stir fried chicken in szechuan spicy sauce">
+            <div class="menu-row-left"><h3>Szechuan Chicken</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="hunan chicken" data-desc="stir fried chicken in hunan spicy sauce vegetables">
+            <div class="menu-row-left"><h3>Hunan Chicken</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="chicken" data-name="mongolian chicken" data-desc="sliced chicken scallions sweet savory mongolian sauce">
+            <div class="menu-row-left"><h3>Mongolian Chicken</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== PORK ===== -->
+      <section class="menu-category" id="cat-pork">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129385;</span>
+          <h2>Pork <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="pork" data-name="roast pork with broccoli" data-desc="roast pork and broccoli in oyster garlic sauce">
+            <div class="menu-row-left"><h3>Roast Pork w. Broccoli</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="pork" data-name="roast pork with chinese vegetable" data-desc="roast pork with mixed chinese vegetables">
+            <div class="menu-row-left"><h3>Roast Pork w. Chinese Vegetable</h3></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+          <div class="menu-row" data-category="pork" data-name="roast pork with garlic sauce" data-desc="roast pork in bold spicy garlic sauce">
+            <div class="menu-row-left"><h3>Roast Pork w. Garlic Sauce</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.49 / Qt $13.39</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SEAFOOD ===== -->
+      <section class="menu-category" id="cat-seafood">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129424;</span>
+          <h2>Seafood <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="seafood" data-name="shrimp with broccoli" data-desc="shrimp and broccoli in oyster garlic sauce">
+            <div class="menu-row-left"><h3>Shrimp w. Broccoli</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="shrimp with lobster sauce" data-desc="tender shrimp in savory egg based lobster sauce ground pork scallions">
+            <div class="menu-row-left"><h3>Shrimp w. Lobster Sauce</h3></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="shrimp with chinese vegetable" data-desc="shrimp with mixed chinese vegetables">
+            <div class="menu-row-left"><h3>Shrimp w. Chinese Vegetable</h3></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="kung po shrimp" data-desc="shrimp with peanuts dried chilies spicy kung po sauce">
+            <div class="menu-row-left"><h3>Kung Po Shrimp</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="shrimp with garlic sauce" data-desc="stir fried shrimp vegetables bold spicy garlic sauce">
+            <div class="menu-row-left"><h3>Shrimp w. Garlic Sauce</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="curry shrimp with onion" data-desc="shrimp with onion in curry sauce">
+            <div class="menu-row-left"><h3>Curry Shrimp w. Onion</h3></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="szechuan shrimp" data-desc="shrimp in szechuan spicy sauce">
+            <div class="menu-row-left"><h3>Szechuan Shrimp</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+          <div class="menu-row" data-category="seafood" data-name="hunan shrimp" data-desc="shrimp in hunan spicy sauce vegetables">
+            <div class="menu-row-left"><h3>Hunan Shrimp</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.89 / Qt $14.19</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== BEEF ===== -->
+      <section class="menu-category" id="cat-beef">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129385;</span>
+          <h2>Beef <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="beef" data-name="beef with broccoli" data-desc="tender beef slices broccoli oyster garlic sauce">
+            <div class="menu-row-left"><h3>Beef w. Broccoli</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="pepper steak with onions" data-desc="sliced beef with green red bell peppers onions savory brown sauce">
+            <div class="menu-row-left"><h3>Pepper Steak w. Onions</h3></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="beef with chinese vegetable" data-desc="beef with mixed chinese vegetables">
+            <div class="menu-row-left"><h3>Beef w. Chinese Vegetable</h3></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="beef with mushroom" data-desc="beef with mushrooms in savory sauce">
+            <div class="menu-row-left"><h3>Beef w. Mushroom</h3></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="beef with garlic sauce" data-desc="stir fried beef vegetables bold spicy garlic sauce">
+            <div class="menu-row-left"><h3>Beef w. Garlic Sauce</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="mongolian beef" data-desc="tender sliced beef scallions sweet savory mongolian sauce">
+            <div class="menu-row-left"><h3>Mongolian Beef</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="szechuan beef" data-desc="beef in szechuan spicy sauce vegetables">
+            <div class="menu-row-left"><h3>Szechuan Beef</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="hunan beef" data-desc="beef in hunan spicy sauce vegetables">
+            <div class="menu-row-left"><h3>Hunan Beef</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+          <div class="menu-row" data-category="beef" data-name="hot and spicy beef" data-desc="beef in very spicy hot sauce">
+            <div class="menu-row-left"><h3>Hot &amp; Spicy Beef</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $8.69 / Qt $13.68</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== VEGETABLE ===== -->
+      <section class="menu-category" id="cat-vegetable">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129367;</span>
+          <h2>Vegetable <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="vegetable" data-name="vegetable delight" data-desc="mixed vegetables stir fried in light sauce">
+            <div class="menu-row-left"><h3>Vegetable Delight</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">Pt $7.75 / Qt $10.68</span>
+          </div>
+          <div class="menu-row" data-category="vegetable" data-name="ma po tofu" data-desc="silken tofu in spicy sichuan sauce">
+            <div class="menu-row-left"><h3>Ma Po Tofu</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Pt $7.75 / Qt $10.68</span>
+          </div>
+          <div class="menu-row" data-category="vegetable" data-name="sauteed string bean" data-desc="stir fried fresh string beans garlic sauce">
+            <div class="menu-row-left"><h3>Sauteed String Bean</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">Pt $7.75 / Qt $10.68</span>
+          </div>
+          <div class="menu-row" data-category="vegetable" data-name="broccoli with garlic sauce" data-desc="broccoli in bold garlic sauce">
+            <div class="menu-row-left"><h3>Broccoli w. Garlic Sauce</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">Pt $7.75 / Qt $10.68</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== DIET FOOD ===== -->
+      <section class="menu-category" id="cat-diet-food">
+        <div class="category-heading">
+          <span class="cat-emoji">&#129382;</span>
+          <h2>Diet Food</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="diet-food" data-name="steamed broccoli" data-desc="steamed fresh broccoli no oil">
+            <div class="menu-row-left"><h3>Steamed Broccoli</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">$10.15</span>
+          </div>
+          <div class="menu-row" data-category="diet-food" data-name="steamed chicken with mixed vegetable" data-desc="steamed chicken with mixed vegetables no oil healthy">
+            <div class="menu-row-left"><h3>Steamed Chicken w. Mixed Vegetable</h3></div>
+            <span class="price">$13.99</span>
+          </div>
+          <div class="menu-row" data-category="diet-food" data-name="steamed chicken with broccoli" data-desc="steamed chicken with broccoli no oil healthy">
+            <div class="menu-row-left"><h3>Steamed Chicken w. Broccoli</h3></div>
+            <span class="price">$13.99</span>
+          </div>
+          <div class="menu-row" data-category="diet-food" data-name="vegetable with chinese and shrimp" data-desc="steamed vegetables with shrimp healthy no oil">
+            <div class="menu-row-left"><h3>Vegetable w. Chinese &amp; Shrimp</h3></div>
+            <span class="price">$13.99</span>
+          </div>
+          <div class="menu-row" data-category="diet-food" data-name="steamed mixed vegetable" data-desc="steamed fresh mixed vegetables no oil healthy">
+            <div class="menu-row-left"><h3>Steamed Mixed Vegetable</h3><span class="tag veg">Vegetarian</span></div>
+            <span class="price">$10.99</span>
+          </div>
+          <div class="menu-row" data-category="diet-food" data-name="steamed scallop and shrimp with mixed vegetable" data-desc="steamed scallop shrimp with mixed vegetables no oil healthy">
+            <div class="menu-row-left"><h3>Steamed Scallop &amp; Shrimp w. Mixed Veg</h3></div>
+            <span class="price">$14.99</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== CHEF'S SPECIAL ===== -->
+      <section class="menu-category" id="cat-chefs-special">
+        <div class="category-heading">
+          <span class="cat-emoji">&#11088;</span>
+          <h2>Chef's Special <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="chefs-special" data-name="seafood delight" data-desc="jumbo shrimp chicken mixed fresh vegetables tasty seafood sauce">
+            <div class="menu-row-left">
+              <h3>S1. Seafood Delight</h3>
+              <p>Jumbo shrimp &amp; chicken w. many kinds of fresh vegetables in tasty seafood sauce.</p>
+            </div>
+            <span class="price">$15.99</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="happy family" data-desc="jumbo shrimp chicken beef scallops roast pork vegetables special sauce">
+            <div class="menu-row-left">
+              <h3>S2. Happy Family</h3>
+              <p>Jumbo shrimp, chicken, beef, scallops, sliced roast pork w. vegetables in our special sauce.</p>
+            </div>
+            <span class="price">$16.99</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="four seasons" data-desc="jumbo shrimp white meat chicken roast pork mixed vegetable house special sauce">
+            <div class="menu-row-left">
+              <h3>S3. Four Seasons</h3>
+              <p>Jumbo shrimp, white meat chicken, roast pork, sauteed w. mixed vegetable in house special sauce.</p>
+            </div>
+            <span class="price">$15.99</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="tung ting shrimp" data-desc="jumbo shrimp sauteed broccoli straw mushroom baby corn carrots delicious white sauce">
+            <div class="menu-row-left">
+              <h3>S4. Tung Ting Shrimp</h3>
+              <p>Jumbo shrimp sauteed w. broccoli, straw mushroom, baby corn &amp; carrots in a delicious white sauce.</p>
+            </div>
+            <span class="price">$15.75</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="triple delight" data-desc="jumbo shrimp sliced chicken tender beef sauteed mixed vegetables house special brown sauce">
+            <div class="menu-row-left">
+              <h3>S5. Triple Delight</h3>
+              <p>Jumbo shrimp, sliced chicken, tender beef sauteed w. mixed vegetables in house special brown sauce.</p>
+            </div>
+            <span class="price">$15.25</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="sub gum wonton" data-desc="beef scallops crab meat chicken shrimp roast pork mixed veges fried crispy wonton">
+            <div class="menu-row-left">
+              <h3>S6. Sub Gum Wonton</h3>
+              <p>Beef, scallops, crab meat, chicken, shrimp, roast pork w. mixed veges &amp; fried crispy wonton.</p>
+            </div>
+            <span class="price">$15.99</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="shrimp and chicken with cashews" data-desc="diced chicken shrimp sauteed diced mixed vegetables special sauce cashews">
+            <div class="menu-row-left">
+              <h3>S7. Shrimp &amp; Chicken w. Cashews</h3>
+              <p>Diced chicken &amp; shrimp sauteed w. diced mixed vegetables in our special lemon sauce w. cashew nuts.</p>
+            </div>
+            <span class="price">$15.25</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="sesame beef or chicken" data-desc="sliced tender beef or chicken fried broccoli chunks sesame special lemon sauce">
+            <div class="menu-row-left">
+              <h3>S8. Sesame Beef or Chicken</h3>
+              <p>Sliced tender beef fried in sauce w. broccoli or chicken chunks sauteed w. broccoli in our special sauce.</p>
+            </div>
+            <span class="price">$13.75</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="chicken with cashew nut" data-desc="chicken stir fried cashew nuts vegetables">
+            <div class="menu-row-left"><h3>S9. Chicken w. Cashew Nut</h3></div>
+            <span class="price">$13.99</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="shrimp with cashew nut" data-desc="shrimp stir fried cashew nuts vegetables">
+            <div class="menu-row-left"><h3>S10. Shrimp w. Cashew Nut</h3></div>
+            <span class="price">$14.99</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="lemon chicken" data-desc="crispy chicken chunks deep fried sauteed in special lemon sauce">
+            <div class="menu-row-left">
+              <h3>S11. Lemon Chicken</h3>
+              <p>Chunk of chicken deep fried crispy sauteed in a special lemon sauce.</p>
+            </div>
+            <span class="price">$13.75</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="peanut chicken" data-desc="chunks deep fried crispy chicken sauteed special sauce peanuts">
+            <div class="menu-row-left"><h3>S13. Peanut Chicken</h3></div>
+            <span class="price">$13.59</span>
+          </div>
+          <div class="menu-row" data-category="chefs-special" data-name="honey chicken" data-desc="chunks deep fried crispy chicken sauteed special honey sauce">
+            <div class="menu-row-left">
+              <h3>S14. Honey Chicken</h3>
+              <p>Chunks of deep fried crispy chicken sauteed w. special honey sauce.</p>
+            </div>
+            <span class="price">$13.59</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SZECHUAN SPECIAL ===== -->
+      <section class="menu-category" id="cat-szechuan-special">
+        <div class="category-heading">
+          <span class="cat-emoji">&#128293;</span>
+          <h2>Szechuan Special <span class="cat-note">w. White Rice</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="szechuan-special" data-name="szechuan shrimp and chicken" data-desc="jumbo shrimp chicken sauteed broccoli green pepper carrots szechuan special sauce">
+            <div class="menu-row-left">
+              <h3>S15. Szechuan Shrimp &amp; Chicken</h3>
+              <p>Jumbo shrimp &amp; chicken sauteed w. broccoli, green pepper, carrots in our Szechuan special sauce.</p>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$15.15</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="general tsos chicken" data-desc="chicken chunks fried on spicy sauteed szechuan sauce">
+            <div class="menu-row-left">
+              <h3>S16. General Tso's Chicken</h3>
+              <p>Chicken chunks fried on a spicy sauteed sauce.</p>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$13.75</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="orange beef or chicken" data-desc="chunks beef or chicken breaded sauteed in orange flavored sauce with pepper">
+            <div class="menu-row-left">
+              <h3>S17. Orange Beef or Chicken</h3>
+              <p>Chunks of beef or chicken breaded and sauteed in orange flavored sauce w. pepper.</p>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$14.75</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="sizzling scallops and beef" data-desc="sliced tender beef scallops sauteed vegetables brown hot spicy sauce">
+            <div class="menu-row-left">
+              <h3>S18. Sizzling Scallops &amp; Beef</h3>
+              <p>Sliced tender beef &amp; scallops sauteed vegetables in brown hot &amp; spicy sauce.</p>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$15.75</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="general tsos shrimp" data-desc="crispy shrimp sweet spicy general tso sauce">
+            <div class="menu-row-left">
+              <h3>S19. General Tso's Shrimp</h3>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$15.75</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="hunan delicacy" data-desc="jumbo shrimp fresh sauteed vegetable garlic sauce">
+            <div class="menu-row-left">
+              <h3>S20. Hunan Delicacy</h3>
+              <p>Jumbo shrimp, fresh sauteed veg. in garlic sauce.</p>
+              <span class="tag spicy">Spicy</span>
+            </div>
+            <span class="price">$15.95</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="bourbon chicken" data-desc="shredded beef hot spicy szechuan bourbon chicken">
+            <div class="menu-row-left"><h3>S21. Bourbon Chicken</h3></div>
+            <span class="price">$14.45</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="singapore chicken" data-desc="singapore style chicken stir fried curry noodles">
+            <div class="menu-row-left"><h3>S22. Singapore Chicken</h3></div>
+            <span class="price">$13.99</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="black pepper chicken" data-desc="chicken stir fried black pepper sauce vegetables">
+            <div class="menu-row-left"><h3>S23. Black Pepper Chicken</h3></div>
+            <span class="price">$13.99</span>
+          </div>
+          <div class="menu-row" data-category="szechuan-special" data-name="dragon and phoenix" data-desc="shrimp and chicken in spicy szechuan sauce dragon phoenix">
+            <div class="menu-row-left"><h3>S24. Dragon &amp; Phoenix</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">$15.55</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== KIDS MEALS ===== -->
+      <section class="menu-category" id="cat-kids-meals">
+        <div class="category-heading">
+          <span class="cat-emoji">&#128057;</span>
+          <h2>Kids Meals <span class="cat-note">w. Fries &amp; Drink</span></h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="kids-meals" data-name="chicken nuggets" data-desc="crispy chicken nuggets fries drink kids meal">
+            <div class="menu-row-left"><h3>Chicken Nuggets <span class="qty">(6 pcs)</span></h3></div>
+            <span class="price">$7.99</span>
+          </div>
+          <div class="menu-row" data-category="kids-meals" data-name="fried shrimp kids" data-desc="fried shrimp fries drink kids meal">
+            <div class="menu-row-left"><h3>Fried Shrimp <span class="qty">(6 pcs)</span></h3></div>
+            <span class="price">$7.99</span>
+          </div>
+          <div class="menu-row" data-category="kids-meals" data-name="fried scallops kids" data-desc="fried scallops fries drink kids meal">
+            <div class="menu-row-left"><h3>Fried Scallops <span class="qty">(6 pcs)</span></h3></div>
+            <span class="price">$7.99</span>
+          </div>
+          <div class="menu-row" data-category="kids-meals" data-name="cheese stick kids" data-desc="cheese sticks fries drink kids meal">
+            <div class="menu-row-left"><h3>Cheese Stick <span class="qty">(5 pcs)</span></h3></div>
+            <span class="price">$7.99</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== FAMILY MEALS ===== -->
+      <section class="menu-category" id="cat-family-meals">
+        <div class="category-heading">
+          <span class="cat-emoji">&#128106;</span>
+          <h2>Family Meals &#11088;&#11088;&#11088;</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="family-meals" data-name="family meal for two" data-desc="sweet sour chicken broccoli pork fried rice egg roll egg drop soup for two">
+            <div class="menu-row-left">
+              <h3>For Two</h3>
+              <p>Sweet &amp; Sour Chicken &bull; Chicken w. Broccoli &bull; Pork Fried Rice &bull; Egg Roll (2) &bull; Egg Drop Soup</p>
+            </div>
+            <span class="price">$22.49</span>
+          </div>
+          <div class="menu-row" data-category="family-meals" data-name="family meal for three" data-desc="sweet sour chicken broccoli general tso pork fried rice egg roll wonton soup for three">
+            <div class="menu-row-left">
+              <h3>For Three</h3>
+              <p>Sweet &amp; Sour Chicken &bull; Chicken w. Broccoli &bull; General Tso's Chicken &bull; Pork Fried Rice &bull; Egg Roll (3) &bull; Wonton Soup</p>
+            </div>
+            <span class="price">$30.49</span>
+          </div>
+          <div class="menu-row" data-category="family-meals" data-name="family meal for four" data-desc="sweet sour chicken garlic sauce general tso shrimp broccoli pork fried rice egg roll egg drop soup for four">
+            <div class="menu-row-left">
+              <h3>For Four</h3>
+              <p>Sweet &amp; Sour Chicken &bull; Chicken w. Garlic Sauce &bull; General Tso's Chicken &bull; Shrimp w. Broccoli &bull; Pork Fried Rice &bull; Egg Roll (4) &bull; Egg Drop Soup</p>
+            </div>
+            <span class="price">$38.99</span>
+          </div>
+          <div class="menu-row" data-category="family-meals" data-name="family meal for five" data-desc="sweet sour chicken garlic sauce general tso pepper steak shrimp broccoli pork fried rice egg roll egg drop soup for five">
+            <div class="menu-row-left">
+              <h3>For Five</h3>
+              <p>Sweet &amp; Sour Chicken &bull; Chicken w. Garlic Sauce &bull; General Tso's Chicken &bull; Pepper Steak &bull; Shrimp w. Broccoli &bull; Pork Fried Rice &bull; Egg Roll (5) &bull; Egg Drop Soup</p>
+            </div>
+            <span class="price">$44.99</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== SIDE ORDERS ===== -->
+      <section class="menu-category" id="cat-side-orders">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127860;</span>
+          <h2>Side Orders</h2>
+        </div>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="side-orders" data-name="white rice" data-desc="plain steamed white rice">
+            <div class="menu-row-left"><h3>White Rice</h3></div>
+            <span class="price">Pt $2.45 / Qt $3.45</span>
+          </div>
+          <div class="menu-row" data-category="side-orders" data-name="fortune cookies" data-desc="crispy fortune cookies with message inside">
+            <div class="menu-row-left"><h3>Fortune Cookies <span class="qty">(4)</span></h3></div>
+            <span class="price">$0.75</span>
+          </div>
+          <div class="menu-row" data-category="side-orders" data-name="fried noodles" data-desc="crispy fried noodles">
+            <div class="menu-row-left"><h3>Fried Noodles</h3></div>
+            <span class="price">Pt $4.25 / Qt $5.49</span>
+          </div>
+          <div class="menu-row" data-category="side-orders" data-name="plain fried rice" data-desc="plain wok fried rice">
+            <div class="menu-row-left"><h3>Plain Fried Rice</h3></div>
+            <span class="price">Pt $4.80 / Qt $7.75</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== LUNCH & COMBO ===== -->
+      <section class="menu-category" id="cat-lunch-combo">
+        <div class="category-heading">
+          <span class="cat-emoji">&#127828;</span>
+          <h2>Lunch &amp; Combo</h2>
+        </div>
+        <p class="cat-subtitle">Lunch Mon–Fri: 11:00 am – 3:00 pm &nbsp;|&nbsp; Combo served w. Pork Fried Rice <strong>OR</strong> Lo Mein &amp; Egg Roll</p>
+        <div class="menu-list">
+
+          <div class="menu-row" data-category="lunch-combo" data-name="shrimp chow mein combo" data-desc="shrimp chow mein lunch combo">
+            <div class="menu-row-left"><h3>C2. Shrimp Chow Mein</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="honey chicken" data-desc="honey glazed crispy chicken">
+            <div class="menu-row-left"><h3>C3. Honey Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="chicken or beef with broccoli" data-desc="chicken or beef with broccoli oyster garlic sauce">
+            <div class="menu-row-left"><h3>C4. Chicken or Beef w. Broccoli</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="pepper steak with onions combo" data-desc="sliced beef peppers onions savory sauce">
+            <div class="menu-row-left"><h3>C5. Pepper Steak w. Onions</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="shrimp with lobster sauce combo" data-desc="shrimp in savory egg based lobster sauce">
+            <div class="menu-row-left"><h3>C6. Shrimp w. Lobster Sauce</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="roast pork or chicken lo mein combo" data-desc="soft egg noodles with roast pork or chicken">
+            <div class="menu-row-left"><h3>C8. Roast Pork or Chicken Lo Mein</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="chicken with mixed vegetables" data-desc="chicken stir fried with mixed vegetables">
+            <div class="menu-row-left"><h3>C9. Chicken w. Mixed Vegs</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="chicken with mushrooms" data-desc="chicken stir fried with mushrooms">
+            <div class="menu-row-left"><h3>C10. Chicken w. Mushrooms</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="sweet and sour chicken or pork combo" data-desc="crispy chicken or pork in sweet sour sauce pineapple peppers">
+            <div class="menu-row-left"><h3>C11. Sweet &amp; Sour Chicken or Pork</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="broccoli with garlic sauce combo" data-desc="broccoli in bold garlic sauce vegetarian">
+            <div class="menu-row-left"><h3>C12. Broccoli w. Garlic Sauce</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="shrimp with garlic sauce combo" data-desc="shrimp in bold spicy garlic sauce">
+            <div class="menu-row-left"><h3>C13. Shrimp w. Garlic Sauce</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="kung po chicken combo" data-desc="stir fried chicken peanuts dried chilies spicy kung po sauce">
+            <div class="menu-row-left"><h3>C14. Kung Po Chicken</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="hunan chicken combo" data-desc="stir fried chicken in hunan spicy sauce">
+            <div class="menu-row-left"><h3>C15. Hunan Chicken</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="general tsos chicken combo" data-desc="crispy chicken sweet spicy general tso sauce sesame">
+            <div class="menu-row-left"><h3>C16. General Tso's Chicken</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="sesame chicken combo" data-desc="crispy chicken honey sweet sesame sauce sesame seeds">
+            <div class="menu-row-left"><h3>C17. Sesame Chicken</h3><span class="tag popular">Popular</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="hunan beef or shrimp combo" data-desc="beef or shrimp in hunan spicy sauce vegetables">
+            <div class="menu-row-left"><h3>C18. Hunan Beef or Shrimp</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="szechuan beef chicken or shrimp combo" data-desc="beef chicken or shrimp in szechuan spicy sauce">
+            <div class="menu-row-left"><h3>C19. Szechuan Beef, Chicken or Shrimp</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="chicken with cashew nuts combo" data-desc="stir fried chicken cashew nuts vegetables">
+            <div class="menu-row-left"><h3>C20. Chicken w. Cashew Nuts</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="shrimp with broccoli combo" data-desc="shrimp and broccoli in oyster garlic sauce">
+            <div class="menu-row-left"><h3>C21. Shrimp w. Broccoli</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="chicken with garlic sauce combo" data-desc="stir fried chicken in bold spicy garlic sauce">
+            <div class="menu-row-left"><h3>C23. Chicken w. Garlic Sauce</h3><span class="tag spicy">Spicy</span></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="mongolian beef combo" data-desc="tender sliced beef scallions sweet savory mongolian sauce">
+            <div class="menu-row-left"><h3>C24. Mongolian Beef</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="shrimp lo mein combo" data-desc="soft egg noodles with shrimp vegetables">
+            <div class="menu-row-left"><h3>C25. Shrimp Lo Mein</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="roast pork with broccoli combo" data-desc="roast pork and broccoli in oyster garlic sauce">
+            <div class="menu-row-left"><h3>C26. Roast Pork w. Broccoli</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="triple delight combo" data-desc="jumbo shrimp sliced chicken tender beef mixed vegetables house brown sauce">
+            <div class="menu-row-left"><h3>C27. Triple Delight</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="mongolian chicken combo" data-desc="sliced chicken scallions sweet savory mongolian sauce">
+            <div class="menu-row-left"><h3>C28. Mongolian Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="sweet and sour shrimp combo" data-desc="crispy shrimp in sweet sour sauce pineapple peppers">
+            <div class="menu-row-left"><h3>C29. Sweet &amp; Sour Shrimp</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="boneless spare ribs combo" data-desc="BBQ boneless spare ribs hoisin glaze">
+            <div class="menu-row-left"><h3>C31. Boneless Spare Ribs</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="bourbon chicken combo" data-desc="bourbon glazed chicken">
+            <div class="menu-row-left"><h3>C32. Bourbon Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="black pepper chicken combo" data-desc="chicken stir fried black pepper sauce vegetables">
+            <div class="menu-row-left"><h3>C33. Black Pepper Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="peanut chicken combo" data-desc="crispy chicken peanut sauce">
+            <div class="menu-row-left"><h3>C34. Peanut Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="pineapple chicken combo" data-desc="chicken stir fried pineapple sweet sauce">
+            <div class="menu-row-left"><h3>C35. Pineapple Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+          <div class="menu-row" data-category="lunch-combo" data-name="singapore chicken combo" data-desc="singapore style chicken curry noodles">
+            <div class="menu-row-left"><h3>C36. Singapore Chicken</h3></div>
+            <span class="price">Lunch $8.49 / Combo $10.69</span>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">&#x9F99;</span>
+        <span class="logo-text">Jay Garden</span>
+        <p>Authentic Chinese cuisine. Take-out &amp; dine-in.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Quick Links</strong>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <strong>Follow Us</strong>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Yelp">y</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Jay Garden Chinese Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

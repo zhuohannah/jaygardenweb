@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jay Garden — Creative Menu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+*{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+@page{size:11in 8.5in;margin:0;}
+
+body{font-family:Arial,Helvetica,sans-serif;font-size:6.8pt;color:#1a0800;background:#666;}
+
+.sheet{width:11in;height:8.5in;display:flex;flex-direction:row;overflow:hidden;page-break-after:always;}
+
+@media screen{
+  body{padding:12px;}
+  .sheet{margin:0 auto 14px;box-shadow:0 4px 28px rgba(0,0,0,.5);}
+  .fold{width:2px;height:100%;flex-shrink:0;background:repeating-linear-gradient(to bottom,#bbb 0,#bbb 5px,transparent 5px,transparent 10px);}
+}
+@media print{body{background:white;padding:0;}.fold{display:none;}.sheet{margin:0;box-shadow:none;}}
+
+.panel{width:3.667in;height:8.5in;flex-shrink:0;overflow:hidden;position:relative;}
+
+/* ══ COVER ══ */
+.cover{
+  background:radial-gradient(ellipse at 50% 30%,rgba(100,20,0,.3) 0%,transparent 55%),
+             linear-gradient(165deg,#0E0000 0%,#360000 50%,#120000 100%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:.2in .18in;position:relative;
+}
+.cover::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(-45deg,transparent 0,transparent 18px,rgba(255,215,0,.03) 18px,rgba(255,215,0,.03) 19px);}
+
+.cv-f1{border:2pt solid rgba(255,210,50,.5);padding:3px;width:100%;position:relative;z-index:1;}
+.cv-f2{border:.75pt solid rgba(255,210,50,.22);padding:14px 12px 12px;}
+
+/* corner diamonds */
+.cc{position:absolute;color:rgba(255,210,50,.65);font-size:9pt;width:10px;height:10px;display:flex;align-items:center;justify-content:center;}
+.cc.tl{top:-6px;left:-6px;}.cc.tr{top:-6px;right:-6px;}
+.cc.bl{bottom:-6px;left:-6px;}.cc.br{bottom:-6px;right:-6px;}
+
+.cv-name{font-family:'Times New Roman',serif;font-size:28pt;font-weight:bold;color:#FFD700;
+  letter-spacing:6px;text-align:center;line-height:1;
+  text-shadow:0 2px 10px rgba(0,0,0,.6),0 0 25px rgba(255,200,0,.2);}
+.cv-sub{font-family:'Times New Roman',serif;font-size:7.5pt;color:rgba(255,228,181,.7);
+  letter-spacing:5px;text-transform:uppercase;text-align:center;margin:4px 0 6px;}
+.cv-zh{font-size:15pt;color:rgba(255,210,50,.6);letter-spacing:14px;text-align:center;margin-bottom:9px;}
+.cv-hr{height:1px;background:linear-gradient(to right,transparent,rgba(255,210,50,.65),transparent);margin:7px 0;}
+.cv-orn{text-align:center;color:rgba(255,210,50,.5);font-size:7.5pt;letter-spacing:5px;margin:5px 0;}
+.cv-tag{font-size:6.5pt;color:rgba(255,215,0,.7);letter-spacing:2px;text-transform:uppercase;text-align:center;margin:4px 0;}
+.cv-info{margin-top:11px;background:rgba(0,0,0,.32);border:.5pt solid rgba(255,210,50,.28);padding:8px 10px;text-align:center;}
+.cv-ph{font-size:11pt;font-weight:bold;color:#FFD700;letter-spacing:1.5px;margin-bottom:3px;}
+.cv-addr{font-size:7pt;color:#FFE4B5;line-height:1.6;margin-bottom:5px;}
+.cv-hrs{font-size:6.5pt;color:rgba(255,228,181,.8);line-height:1.75;}
+.cv-hrs .hl{color:#FFD700;font-weight:bold;letter-spacing:1px;text-transform:uppercase;font-size:6pt;}
+.cv-closed{color:#FF9999;}
+.cv-cards{font-size:5.5pt;color:rgba(255,228,181,.45);letter-spacing:1.5px;text-transform:uppercase;text-align:center;margin-top:7px;}
+
+/* ══ BACK / LUNCH PANEL ══ */
+.back{background:#FFFAF5;display:flex;flex-direction:column;overflow:hidden;}
+.bk-hdr{background:linear-gradient(to right,#620000,#982020);padding:7px 8px;text-align:center;flex-shrink:0;}
+.bk-hdr h2{font-family:'Times New Roman',serif;font-size:11pt;color:#FFD700;letter-spacing:2px;text-transform:uppercase;}
+.bk-hdr p{font-size:6.5pt;color:#FFE4B5;margin-top:2px;}
+.bk-info{background:white;border-bottom:1.5pt solid #C8960C;padding:4px 7px;font-size:6.5pt;line-height:1.7;flex-shrink:0;}
+.bk-info .lb{color:#8B0000;font-weight:bold;}
+.bk-strip{background:linear-gradient(to right,#FFF5E0,#FFEDCC,#FFF5E0);border-bottom:1pt solid rgba(200,150,12,.4);
+  padding:3.5px 7px;font-size:6.8pt;color:#333;text-align:center;flex-shrink:0;}
+.combo-cols{display:grid;grid-template-columns:1fr 1fr;padding:3px 5px;gap:0 3px;flex:1;background:white;overflow:hidden;}
+.cr{display:flex;align-items:baseline;padding:1.5px 0 1.5px 3px;border-left:1.5pt solid #C8960C;
+  font-size:6.3pt;line-height:1.3;margin-bottom:1.5px;}
+.cr:nth-child(4n+1),.cr:nth-child(4n+2){background:#FFF8F0;}
+.cnum{font-weight:bold;color:#8B0000;min-width:17px;font-size:5.8pt;}
+.cm{flex:1;overflow:hidden;}
+.cp{font-size:5.8pt;font-weight:bold;color:#8B0000;white-space:nowrap;margin-left:2px;}
+.bk-foot{background:linear-gradient(to right,#620000,#982020);padding:4px 6px;text-align:center;
+  font-size:5.8pt;color:#FFE4B5;flex-shrink:0;border-top:1.5pt solid #C8960C;}
+
+/* ══ CONTENT PANELS ══ */
+.content{background:#FFFAF5;padding:.12in .12in;}
+.pt{text-align:center;font-family:'Times New Roman',serif;font-size:6.8pt;color:#7B0000;
+  letter-spacing:2.5px;text-transform:uppercase;border-bottom:1pt solid #C8960C;padding-bottom:2px;margin-bottom:4px;}
+
+/* category */
+.cat{margin-bottom:4px;}
+.cat-hd{display:flex;align-items:stretch;overflow:hidden;}
+
+/* 7 color themes */
+.hv1{background:linear-gradient(to right,#8B0000,#B02020);}
+.hv2{background:linear-gradient(to right,#5B0000,#7B1515);}
+.hv3{background:linear-gradient(to right,#7A4800,#A06200);}
+.hv4{background:linear-gradient(to right,#200800,#3D1800);}
+.hv5{background:linear-gradient(to right,#8B1800,#C83000);}
+.hv6{background:linear-gradient(to right,#004848,#006868);}
+.hv7{background:linear-gradient(to right,#1A0800,#3D1800);}
+
+.hd-tab{background:rgba(0,0,0,.22);width:23px;flex-shrink:0;display:flex;align-items:center;
+  justify-content:center;font-size:10pt;padding:3px 1px;}
+.hd-lbl{flex:1;padding:3px 5px;font-family:'Times New Roman',Georgia,serif;font-size:8.5pt;font-weight:bold;
+  color:#FFD700;letter-spacing:.7px;text-transform:uppercase;display:flex;align-items:center;gap:5px;}
+.hd-note{font-size:5.5pt;font-weight:normal;color:rgba(255,228,181,.65);text-transform:none;letter-spacing:0;}
+
+/* body */
+.cat-bd{background:white;border-left:2pt solid #9B2020;border-right:.5pt solid rgba(139,0,0,.1);
+  border-bottom:.5pt solid rgba(139,0,0,.1);padding:2px 4px 2px;}
+
+/* item row */
+.r{display:flex;align-items:baseline;padding:1.5px 2px;font-size:6.8pt;line-height:1.3;}
+.r:nth-child(even){background:#FFF8F0;}
+.n{flex:1;}
+.d{flex:1;border-bottom:.75pt dotted #C8A060;margin:0 3px;min-width:6px;}
+.p{font-weight:bold;color:#7B0000;font-size:6.5pt;white-space:nowrap;}
+.sp{color:#CC0000;font-size:5.5pt;}
+
+/* helpers */
+.cn{font-size:6pt;color:#777;font-style:italic;padding:0 2px 2px;}
+.sz{font-size:6pt;color:#999;text-align:right;font-style:italic;margin-bottom:1px;}
+.sh{font-size:5.8pt;font-weight:bold;color:#7B0000;text-transform:uppercase;letter-spacing:.4px;
+  background:linear-gradient(to right,#FFF0D8,#FFFBF0);padding:1.5px 4px;margin:2px 0;border-left:2pt solid #C8960C;}
+.cat-note{font-size:5.8pt;color:#666;font-style:italic;text-align:center;padding:1.5px 4px;
+  background:#FFFBF0;border:.5pt solid rgba(200,150,12,.25);border-top:none;}
+.spicy-bar{background:#FFF0F0;border-left:2pt solid #CC0000;font-size:6.3pt;color:#AA0000;padding:2px 4px;margin-bottom:2px;}
+
+/* family cards */
+.fam3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;padding:4px 5px;
+  background:white;border-left:2pt solid #A06200;border-right:.5pt solid rgba(139,0,0,.1);border-bottom:.5pt solid rgba(139,0,0,.1);}
+.fcard{border:.5pt solid #C8960C;text-align:center;padding:4px 2px;background:linear-gradient(to bottom,#FFFBF0,#FFF5DC);}
+.ft{font-size:6.5pt;font-weight:bold;color:#8B0000;}
+.fp{font-size:11pt;font-weight:bold;color:#C8960C;line-height:1.1;}
+.fi{font-size:5pt;color:#555;line-height:1.4;margin-top:2px;}
+
+.sig{margin-top:4px;text-align:center;background:linear-gradient(to right,#620000,#982020);
+  padding:5px 6px;border:.5pt solid #C8960C;}
+</style>
+</head>
+<body>
+
+<!-- ════════════ SHEET 1 — OUTSIDE ════════════ -->
+<div class="sheet">
+
+  <!-- PANEL 1 — BACK COVER: Lunch Combo -->
+  <div class="panel back">
+    <div class="bk-hdr">
+      <h2>🥢 Lunch &amp; Combo</h2>
+      <p>Monday – Saturday &nbsp;·&nbsp; 11:00am – 3:00pm only</p>
+    </div>
+    <div class="bk-info">
+      <div><span class="lb">📍</span> 3968 Highway 4, Jay, FL 32565</div>
+      <div><span class="lb">📞</span> (850) 675-5551 &nbsp;·&nbsp; Fax: (850) 675-4880</div>
+      <div><span class="lb">⏰</span> Mon–Fri: 10am–8:30pm &nbsp;·&nbsp; Sat: <span style="color:#CC0000;font-weight:bold;">Closed</span> &nbsp;·&nbsp; Sun: 11am–8:30pm</div>
+      <div><span class="lb">💳</span> Visa &amp; MasterCard Accepted</div>
+    </div>
+    <div class="bk-strip">
+      <strong>Lunch $8.49</strong> &nbsp;|&nbsp; <strong>Combo $10.69</strong> &nbsp;—&nbsp; Combo served w. Pork Fried Rice &amp; Egg Roll
+    </div>
+    <div class="combo-cols">
+      <div class="cr"><span class="cnum">C1</span><span class="cm">Chicken w. String Beans</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C2</span><span class="cm">Shrimp Chow Mein</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C3</span><span class="cm">Honey Chicken</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C4</span><span class="cm">Chicken or Beef w. Broccoli</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C5</span><span class="cm">Pepper Steak w. Onions</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C6</span><span class="cm">Shrimp w. Lobster Sauce</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C7</span><span class="cm">Roast Pork or Chicken Lo Mein</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C8</span><span class="cm">Chicken/Beef/Pork w. Mixed Veg.</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C10</span><span class="cm">Chicken w. Mushrooms</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C11</span><span class="cm">Sweet &amp; Sour Chicken or Pork</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C12</span><span class="cm">Broccoli w. Garlic Sauce 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C13</span><span class="cm">Shrimp w. Garlic Sauce 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C14</span><span class="cm">Kung Po Chicken 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C15</span><span class="cm">Hunan Chicken 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C16</span><span class="cm">General Tso's Chicken 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C17</span><span class="cm">Sesame Chicken</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C18</span><span class="cm">Hunan Beef or Shrimp 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C19</span><span class="cm">Szechuan Beef/Chicken/Shrimp 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C20</span><span class="cm">Chicken w. Cashew Nuts</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C21</span><span class="cm">Shrimp w. Broccoli</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C23</span><span class="cm">Chicken w. Garlic Sauce 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C24</span><span class="cm">Mongolian Beef 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C25</span><span class="cm">Shrimp Lo Mein</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C26</span><span class="cm">Roast Pork w. Broccoli</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C27</span><span class="cm">Triple Delight</span><span class="cp">$10.69</span></div>
+      <div class="cr"><span class="cnum">C28</span><span class="cm">Mongolian Chicken 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C29</span><span class="cm">Sweet &amp; Sour Shrimp</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C31</span><span class="cm">Boneless Spare Ribs</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C32</span><span class="cm">Bourbon Chicken 🌶</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C33</span><span class="cm">Black Pepper Chicken</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C34</span><span class="cm">Peanut Chicken</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C35</span><span class="cm">Pineapple Chicken</span><span class="cp">8.49/10.69</span></div>
+      <div class="cr"><span class="cnum">C36</span><span class="cm">Singapore Chicken</span><span class="cp">$10.69</span></div>
+    </div>
+    <div class="bk-foot">Lunch Bar $11.00 — 4 items + Lo Mein (Mon–Fri dine-in) &nbsp;·&nbsp; 🌶 Spice adjusted to taste &nbsp;·&nbsp; Prices subject to change</div>
+  </div>
+
+  <div class="fold"></div>
+
+  <!-- PANEL 2 — FRONT COVER -->
+  <div class="panel cover">
+    <div class="cv-f1">
+      <div class="cc tl">◈</div><div class="cc tr">◈</div>
+      <div class="cc bl">◈</div><div class="cc br">◈</div>
+      <div class="cv-f2">
+        <div class="cv-orn">◆ &nbsp;─────&nbsp; ◆ &nbsp;─────&nbsp; ◆</div>
+        <div class="cv-name">JAY<br>GARDEN</div>
+        <div class="cv-sub">Chinese Restaurant</div>
+        <div class="cv-zh">傑 &nbsp;&nbsp; 園</div>
+        <div class="cv-hr"></div>
+        <div class="cv-orn" style="font-size:7pt;letter-spacing:4px;">❖ &nbsp;── &nbsp;★&nbsp; ──&nbsp; ❖</div>
+        <div class="cv-tag">Famous Cantonese · Szechuan · Hunan Style</div>
+        <div class="cv-tag" style="margin-top:3px;font-size:5.8pt;color:rgba(255,215,0,.45);">EAT IN &nbsp;·&nbsp; TAKE OUT</div>
+        <div class="cv-hr" style="margin-top:11px;"></div>
+        <div class="cv-info">
+          <div class="cv-ph">(850) 675-5551</div>
+          <div class="cv-addr">3968 Highway 4 &nbsp;·&nbsp; Jay, FL 32565</div>
+          <div class="cv-hrs">
+            <div class="hl">Hours of Operation</div>
+            <div>Mon – Fri: &nbsp;10:00am – 8:30pm</div>
+            <div class="cv-closed">Saturday: &nbsp;Closed</div>
+            <div>Sunday: &nbsp;11:00am – 8:30pm</div>
+          </div>
+        </div>
+        <div class="cv-cards">MasterCard &amp; Visa Accepted</div>
+        <div class="cv-orn" style="margin-top:8px;">◆ &nbsp;─────&nbsp; ◆ &nbsp;─────&nbsp; ◆</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fold"></div>
+
+  <!-- PANEL 3 — INSIDE FLAP: Starters -->
+  <div class="panel content">
+    <div class="pt">❖ &nbsp; Starters &amp; Extras &nbsp; ❖</div>
+
+    <div class="cat">
+      <div class="cat-hd hv1"><div class="hd-tab">🥟</div><div class="hd-lbl">Appetizers</div></div>
+      <div class="cat-bd" style="border-left-color:#9B2020;">
+        <div class="r"><span class="n">Egg Roll (1)</span><span class="d"></span><span class="p">$1.89</span></div>
+        <div class="r"><span class="n">Spring Roll (2)</span><span class="d"></span><span class="p">$2.79</span></div>
+        <div class="r"><span class="n">Fried Wonton (8)</span><span class="d"></span><span class="p">$4.39</span></div>
+        <div class="r"><span class="n">Crab Rangoon (8)</span><span class="d"></span><span class="p">$5.39</span></div>
+        <div class="r"><span class="n">Fried Shrimp (8)</span><span class="d"></span><span class="p">$6.09</span></div>
+        <div class="r"><span class="n">Steamed Dumpling (8)</span><span class="d"></span><span class="p">$6.09</span></div>
+        <div class="r"><span class="n">Fried Dumpling (8)</span><span class="d"></span><span class="p">$6.09</span></div>
+        <div class="r"><span class="n">BBQ Spare Ribs</span><span class="d"></span><span class="p">$10.09</span></div>
+        <div class="r"><span class="n">Boneless Spare Ribs</span><span class="d"></span><span class="p">$11.99</span></div>
+        <div class="r"><span class="n">Cold Noodle w. Sesame Sauce</span><span class="d"></span><span class="p">$7.09</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv3"><div class="hd-tab">🍲</div><div class="hd-lbl">Soup</div></div>
+      <div class="cat-bd" style="border-left-color:#A06200;">
+        <div class="sz">Sm / Lg</div>
+        <div class="r"><span class="n">Wonton Soup</span><span class="d"></span><span class="p">3.39/4.89</span></div>
+        <div class="r"><span class="n">Egg Drop Soup</span><span class="d"></span><span class="p">3.39/4.89</span></div>
+        <div class="r"><span class="n">Hot &amp; Sour Soup <span class="sp">🌶</span></span><span class="d"></span><span class="p">3.39/4.89</span></div>
+        <div class="r"><span class="n">Noodle Soup</span><span class="d"></span><span class="p">$7.49</span></div>
+        <div class="r"><span class="n">House Special Soup</span><span class="d"></span><span class="p">$8.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv2"><div class="hd-tab">🍋</div><div class="hd-lbl">Sweet &amp; Sour</div></div>
+      <div class="cat-bd" style="border-left-color:#7B1515;">
+        <div class="sz">Sm / Lg</div>
+        <div class="r"><span class="n">Chicken</span><span class="d"></span><span class="p">7.85/12.68</span></div>
+        <div class="r"><span class="n">Pork</span><span class="d"></span><span class="p">7.85/12.68</span></div>
+        <div class="r"><span class="n">Shrimp</span><span class="d"></span><span class="p">8.49/13.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv4"><div class="hd-tab">🍳</div><div class="hd-lbl">Egg Foo Young</div></div>
+      <div class="cat-bd" style="border-left-color:#3D1800;">
+        <div class="r"><span class="n">Vegetable</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Chicken</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Beef</span><span class="d"></span><span class="p">$10.79</span></div>
+        <div class="r"><span class="n">Roast Pork</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Shrimp</span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">House Special</span><span class="d"></span><span class="p">$12.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv1"><div class="hd-tab">🥡</div><div class="hd-lbl">Side Orders</div></div>
+      <div class="cat-bd" style="border-left-color:#9B2020;">
+        <div class="r"><span class="n">White Rice (Sm)</span><span class="d"></span><span class="p">$2.25</span></div>
+        <div class="r"><span class="n">Fried Rice (Sm/Lg)</span><span class="d"></span><span class="p">2.75/3.45</span></div>
+        <div class="r"><span class="n">Egg Roll (1)</span><span class="d"></span><span class="p">$1.25</span></div>
+        <div class="r"><span class="n">Wonton (2)</span><span class="d"></span><span class="p">$1.25</span></div>
+        <div class="r"><span class="n">Noodles</span><span class="d"></span><span class="p">$1.75</span></div>
+        <div class="r"><span class="n">Fortune Cookies</span><span class="d"></span><span class="p">$0.50</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv3"><div class="hd-tab">🧒</div><div class="hd-lbl">Kids Menu</div></div>
+      <div class="cat-bd" style="border-left-color:#A06200;">
+        <div class="r"><span class="n">Chicken Fried Rice</span><span class="d"></span><span class="p">$7.99</span></div>
+        <div class="r"><span class="n">Egg Roll + Fried Rice</span><span class="d"></span><span class="p">$7.99</span></div>
+        <div class="r"><span class="n">Sweet &amp; Sour Chicken + Rice</span><span class="d"></span><span class="p">$7.99</span></div>
+        <div class="r"><span class="n">Chicken Chow Mein</span><span class="d"></span><span class="p">$7.99</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /sheet 1 -->
+
+
+<!-- ════════════ SHEET 2 — INSIDE ════════════ -->
+<div class="sheet">
+
+  <!-- PANEL 4 — RICE, NOODLES, VEG, DIET -->
+  <div class="panel content">
+    <div class="pt">❖ &nbsp; Rice &amp; Noodles &nbsp; ❖</div>
+
+    <div class="cat">
+      <div class="cat-hd hv1"><div class="hd-tab">🍚</div><div class="hd-lbl">Fried Rice</div></div>
+      <div class="cat-bd" style="border-left-color:#9B2020;">
+        <div class="sz">Sm / Lg</div>
+        <div class="r"><span class="n">Vegetable</span><span class="d"></span><span class="p">7.79/8.99</span></div>
+        <div class="r"><span class="n">Chicken</span><span class="d"></span><span class="p">8.99/9.99</span></div>
+        <div class="r"><span class="n">Beef</span><span class="d"></span><span class="p">8.99/9.99</span></div>
+        <div class="r"><span class="n">BBQ Pork</span><span class="d"></span><span class="p">8.99/9.99</span></div>
+        <div class="r"><span class="n">Shrimp</span><span class="d"></span><span class="p">8.99/9.99</span></div>
+        <div class="r"><span class="n">House Special</span><span class="d"></span><span class="p">9.99/10.99</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv2"><div class="hd-tab">🍜</div><div class="hd-lbl">Chow Mein</div></div>
+      <div class="cat-bd" style="border-left-color:#7B1515;">
+        <div class="r"><span class="n">Vegetable</span><span class="d"></span><span class="p">$8.49</span></div>
+        <div class="r"><span class="n">Chicken</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Beef</span><span class="d"></span><span class="p">$9.79</span></div>
+        <div class="r"><span class="n">Roast Pork</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Shrimp</span><span class="d"></span><span class="p">$9.79</span></div>
+        <div class="r"><span class="n">House Special</span><span class="d"></span><span class="p">$10.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv4"><div class="hd-tab">🍝</div>
+        <div class="hd-lbl">Chow Mei Fun <span class="hd-note">Rice Noodles</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#3D1800;">
+        <div class="r"><span class="n">Vegetable</span><span class="d"></span><span class="p">$8.49</span></div>
+        <div class="r"><span class="n">Chicken</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Beef</span><span class="d"></span><span class="p">$9.79</span></div>
+        <div class="r"><span class="n">Roast Pork</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Shrimp</span><span class="d"></span><span class="p">$9.79</span></div>
+        <div class="r"><span class="n">House Special</span><span class="d"></span><span class="p">$10.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv3"><div class="hd-tab">🍜</div>
+        <div class="hd-lbl">Lo Mein <span class="hd-note">Soft Noodles</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#A06200;">
+        <div class="r"><span class="n">Vegetable</span><span class="d"></span><span class="p">$6.69</span></div>
+        <div class="r"><span class="n">Chicken</span><span class="d"></span><span class="p">$6.69</span></div>
+        <div class="r"><span class="n">Beef</span><span class="d"></span><span class="p">$7.99</span></div>
+        <div class="r"><span class="n">Roast Pork</span><span class="d"></span><span class="p">$6.69</span></div>
+        <div class="r"><span class="n">Shrimp</span><span class="d"></span><span class="p">$7.99</span></div>
+        <div class="r"><span class="n">House Special</span><span class="d"></span><span class="p">$10.50</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv7"><div class="hd-tab">🥦</div><div class="hd-lbl">Vegetable</div></div>
+      <div class="cat-bd" style="border-left-color:#3D1800;">
+        <div class="r"><span class="n">Mixed Vegetables</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Broccoli w. Garlic Sauce <span class="sp">🌶</span></span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Vegetable Delight</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Bean Curd w. Mixed Veg.</span><span class="d"></span><span class="p">$9.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv3"><div class="hd-tab">🥗</div>
+        <div class="hd-lbl">Diet Food <span class="hd-note">Steamed · Sauce on Side</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#A06200;">
+        <div class="r"><span class="n">Steamed Mixed Vegetables</span><span class="d"></span><span class="p">$9.49</span></div>
+        <div class="r"><span class="n">Steamed Chicken w. Broccoli</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Steamed Chicken w. Mixed Veg.</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Steamed Shrimp w. Broccoli</span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Steamed Shrimp w. Mixed Veg.</span><span class="d"></span><span class="p">$12.49</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="fold"></div>
+
+  <!-- PANEL 5 — CHICKEN, PORK, BEEF -->
+  <div class="panel content">
+    <div class="pt">❖ &nbsp; Entrées &nbsp; ❖</div>
+
+    <div class="cat">
+      <div class="cat-hd hv1"><div class="hd-tab">🍗</div>
+        <div class="hd-lbl">Chicken <span class="hd-note">Served w. White Rice</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#9B2020;">
+        <div class="r"><span class="n">w. Broccoli</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">w. String Beans</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">w. Mushrooms</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">w. Mixed Vegetables</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">w. Cashew Nuts</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">w. Garlic Sauce <span class="sp">🌶</span></span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Kung Po Chicken <span class="sp">🌶</span></span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Hunan Chicken <span class="sp">🌶</span></span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Moo Goo Gai Pan</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Honey Chicken</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Mongolian Chicken <span class="sp">🌶</span></span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Pineapple Chicken</span><span class="d"></span><span class="p">$10.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv2"><div class="hd-tab">🍖</div>
+        <div class="hd-lbl">Pork <span class="hd-note">Served w. White Rice</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#7B1515;">
+        <div class="r"><span class="n">Roast Pork w. Broccoli</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Roast Pork w. Mixed Veg.</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Roast Pork w. Mushrooms</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">Roast Pork w. Chinese Veg.</span><span class="d"></span><span class="p">$10.49</span></div>
+        <div class="r"><span class="n">BBQ Spare Ribs</span><span class="d"></span><span class="p">$11.99</span></div>
+        <div class="r"><span class="n">Boneless Spare Ribs</span><span class="d"></span><span class="p">$11.99</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv4"><div class="hd-tab">🥩</div>
+        <div class="hd-lbl">Beef <span class="hd-note">Served w. White Rice</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#3D1800;">
+        <div class="r"><span class="n">Pepper Steak w. Onions</span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Beef w. Broccoli</span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Beef w. Mushrooms</span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Beef w. Mixed Vegetables</span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Beef w. Garlic Sauce <span class="sp">🌶</span></span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Beef w. String Beans</span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Mongolian Beef <span class="sp">🌶</span></span><span class="d"></span><span class="p">$11.49</span></div>
+        <div class="r"><span class="n">Hunan Beef <span class="sp">🌶</span></span><span class="d"></span><span class="p">$11.49</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="fold"></div>
+
+  <!-- PANEL 6 — SEAFOOD, CHEF'S SPECIAL, SZECHUAN, HOUSE, FAMILY -->
+  <div class="panel content">
+    <div class="pt">❖ &nbsp; Specials &amp; More &nbsp; ❖</div>
+
+    <div class="cat">
+      <div class="cat-hd hv6"><div class="hd-tab">🦐</div>
+        <div class="hd-lbl">Seafood <span class="hd-note">Served w. White Rice</span></div>
+      </div>
+      <div class="cat-bd" style="border-left-color:#006868;">
+        <div class="r"><span class="n">Shrimp w. Broccoli</span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Shrimp w. Lobster Sauce</span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Shrimp w. Garlic Sauce <span class="sp">🌶</span></span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Shrimp w. Mixed Vegetables</span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Kung Po Shrimp <span class="sp">🌶</span></span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Hunan Shrimp <span class="sp">🌶</span></span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Shrimp w. Cashew Nuts</span><span class="d"></span><span class="p">$12.49</span></div>
+        <div class="r"><span class="n">Shrimp w. String Beans</span><span class="d"></span><span class="p">$12.49</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv7"><div class="hd-tab">👨‍🍳</div><div class="hd-lbl">Chef's Special</div></div>
+      <div class="cat-bd" style="border-left-color:#3D1800;">
+        <div class="r"><span class="n">Happy Family</span><span class="d"></span><span class="p">$14.09</span></div>
+        <div class="r"><span class="n">Triple Delight</span><span class="d"></span><span class="p">$13.75</span></div>
+        <div class="r"><span class="n">Tung Ting Shrimp</span><span class="d"></span><span class="p">$13.25</span></div>
+        <div class="r"><span class="n">Sur Goo Gai Pan</span><span class="d"></span><span class="p">$12.75</span></div>
+        <div class="r"><span class="n">Sesame Beef or Chicken</span><span class="d"></span><span class="p">$13.72</span></div>
+        <div class="r"><span class="n">Hunan Chicken w. Cashews <span class="sp">🌶</span></span><span class="d"></span><span class="p">$15.25</span></div>
+        <div class="r"><span class="n">Peanut Cashew Nut Chicken</span><span class="d"></span><span class="p">$13.72</span></div>
+        <div class="r"><span class="n">General Tso's Chicken <span class="sp">🌶</span></span><span class="d"></span><span class="p">$13.75</span></div>
+        <div class="r"><span class="n">Bourbon Chicken</span><span class="d"></span><span class="p">$13.99</span></div>
+        <div class="r"><span class="n">Singapore Chicken <span class="sp">🌶</span></span><span class="d"></span><span class="p">$13.99</span></div>
+        <div class="r"><span class="n">Orange Beef or Chicken</span><span class="d"></span><span class="p">$13.99</span></div>
+        <div class="r"><span class="n">Black Pepper Steak</span><span class="d"></span><span class="p">$14.75</span></div>
+        <div class="r"><span class="n">Dragon &amp; Phoenix <span class="sp">🌶</span></span><span class="d"></span><span class="p">$15.55</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv5"><div class="hd-tab">🌶️</div><div class="hd-lbl">Szechuan Special</div></div>
+      <div class="cat-bd" style="border-left-color:#C83000;">
+        <div class="spicy-bar">🌶 Spice level adjusted to your taste!</div>
+        <div class="r"><span class="n">Szechuan Shrimp or Chicken</span><span class="d"></span><span class="p">$12.71</span></div>
+        <div class="r"><span class="n">General Tso's Chicken</span><span class="d"></span><span class="p">$12.71</span></div>
+        <div class="r"><span class="n">Peanut Chicken</span><span class="d"></span><span class="p">$13.39</span></div>
+        <div class="r"><span class="n">Bourbon Chicken</span><span class="d"></span><span class="p">$13.39</span></div>
+        <div class="r"><span class="n">Orange Beef or Chicken</span><span class="d"></span><span class="p">$13.75</span></div>
+        <div class="r"><span class="n">Spring Scallops &amp; Beef</span><span class="d"></span><span class="p">$13.75</span></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv3"><div class="hd-tab">⭐</div><div class="hd-lbl">House Special</div></div>
+      <div class="cat-bd" style="border-left-color:#A06200;">
+        <div class="r"><span class="n">House Special Platter</span><span class="d"></span><span class="p">$14.99</span></div>
+        <div class="r"><span class="n">House Special Chicken &amp; Shrimp</span><span class="d"></span><span class="p">$14.99</span></div>
+        <div class="r"><span class="n">House Special Seafood Delight</span><span class="d"></span><span class="p">$15.99</span></div>
+      </div>
+      <div class="cat-note">Ask your server for today's selections</div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-hd hv1"><div class="hd-tab">👨‍👩‍👧‍👦</div><div class="hd-lbl">Family Meals ★★★</div></div>
+      <div class="fam3">
+        <div class="fcard"><div class="ft">For 2</div><div class="fp">$30.49</div><div class="fi">2 Entrées · Fried Rice · 2 Egg Rolls · Soup</div></div>
+        <div class="fcard"><div class="ft">For 3–4</div><div class="fp">$34.49</div><div class="fi">3 Entrées · Fried Rice · 3 Egg Rolls · Soup</div></div>
+        <div class="fcard"><div class="ft">For 5+</div><div class="fp">$56.49</div><div class="fi">5 Entrées · Fried Rice · 5 Egg Rolls · Soup</div></div>
+      </div>
+    </div>
+
+    <div class="sig">
+      <div style="color:#FFD700;font-family:'Times New Roman',serif;font-size:9pt;letter-spacing:2px;">JAY GARDEN</div>
+      <div style="color:#FFE4B5;font-size:5.8pt;margin-top:1px;">(850) 675-5551 &nbsp;·&nbsp; 3968 Hwy 4, Jay FL &nbsp;·&nbsp; Open 6 Days a Week</div>
+    </div>
+
+  </div>
+
+</div><!-- /sheet 2 -->
+</body>
+</html>

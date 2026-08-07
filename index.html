@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Garden Chinese Restaurant</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">&#x9F99;</span>
+        <span class="logo-text">Jay Garden</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+
+    <!-- Bamboo stalks -->
+    <div class="bamboo-group bamboo-left" aria-hidden="true">
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+    </div>
+    <div class="bamboo-group bamboo-right" aria-hidden="true">
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+      <span class="b-stalk"></span>
+    </div>
+
+    <!-- Dragon watermark -->
+    <div class="dragon-seal" aria-hidden="true">龍</div>
+
+    <!-- Lanterns -->
+    <div class="lantern lantern-left" aria-hidden="true">
+      <div class="lantern-cap"></div>
+      <div class="lantern-body"></div>
+      <div class="lantern-fringe"></div>
+    </div>
+    <div class="lantern lantern-right" aria-hidden="true">
+      <div class="lantern-cap"></div>
+      <div class="lantern-body"></div>
+      <div class="lantern-fringe"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-sub">&#9679; Authentic Chinese Cuisine &#9679;</p>
+      <h1>Jay Garden</h1>
+      <p class="hero-desc">Homestyle Chinese cooking — made fresh, served fast.<br>Take-out &amp; dine-in welcome.</p>
+      <div class="hero-btns">
+        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+        <a href="#contact" class="btn btn-outline">Find Us</a>
+      </div>
+    </div>
+    <div class="scroll-hint">&#8595;</div>
+  </section>
+
+  <!-- MENU PREVIEW -->
+  <section class="menu-preview" id="menu">
+    <div class="bamboo-divider" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="container">
+      <p class="section-label center">&#127808; What We Serve &#127808;</p>
+      <h2 class="center">Our Menu</h2>
+      <div class="category-grid">
+        <a href="menu.html#appetizers" class="category-card">
+          <div class="cat-icon">&#127836;</div>
+          <h3>Appetizers &amp; Soup</h3>
+          <p>Spring rolls, dumplings, egg rolls &amp; soups</p>
+          <span class="cat-link">See Items &#8594;</span>
+        </a>
+        <a href="menu.html#chicken" class="category-card">
+          <div class="cat-icon">&#127831;</div>
+          <h3>Chicken, Beef &amp; Seafood</h3>
+          <p>Broccoli, Garlic Sauce, Kung Po &amp; more</p>
+          <span class="cat-link">See Items &#8594;</span>
+        </a>
+        <a href="menu.html#lo-mein" class="category-card">
+          <div class="cat-icon">&#127837;</div>
+          <h3>Noodles &amp; Fried Rice</h3>
+          <p>Lo Mein, Fried Rice, Chow Mein &amp; more</p>
+          <span class="cat-link">See Items &#8594;</span>
+        </a>
+        <a href="menu.html#chefs-special" class="category-card">
+          <div class="cat-icon">&#11088;</div>
+          <h3>Chef's Specials</h3>
+          <p>Happy Family, General Tso's, Lemon Chicken</p>
+          <span class="cat-link">See Items &#8594;</span>
+        </a>
+      </div>
+      <div class="menu-cta">
+        <a href="menu.html" class="btn btn-primary">View Full Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <h2 class="center">Customer Reviews</h2>
+        <div class="avg-rating">
+          <span class="avg-stars" id="avg-stars">★★★★★</span>
+          <span class="avg-score" id="avg-score">5.0</span>
+          <span class="avg-count" id="avg-count">(5 reviews)</span>
+        </div>
+      </div>
+
+      <!-- Review cards -->
+      <div class="reviews-grid" id="reviews-grid"></div>
+
+      <!-- Write a review -->
+      <div class="review-form-wrap">
+        <h3>&#9997;&#65039; Write a Review</h3>
+        <form class="review-form" id="review-form" novalidate>
+          <div class="form-row-two">
+            <div class="form-group">
+              <label for="reviewer-name">Your Name</label>
+              <input type="text" id="reviewer-name" placeholder="e.g. Sarah M." required />
+            </div>
+            <div class="form-group">
+              <label>Your Rating</label>
+              <div class="star-picker" id="star-picker" role="group" aria-label="Star rating">
+                <button type="button" class="star-pick" data-val="1" aria-label="1 star">&#9733;</button>
+                <button type="button" class="star-pick" data-val="2" aria-label="2 stars">&#9733;</button>
+                <button type="button" class="star-pick" data-val="3" aria-label="3 stars">&#9733;</button>
+                <button type="button" class="star-pick" data-val="4" aria-label="4 stars">&#9733;</button>
+                <button type="button" class="star-pick" data-val="5" aria-label="5 stars">&#9733;</button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="reviewer-text">Your Review</label>
+            <textarea id="reviewer-text" rows="4" placeholder="Tell us about your experience — what did you order? What did you love?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary review-submit-btn">Submit Review</button>
+        </form>
+        <div class="review-success" id="review-success">
+          <span>&#10003;</span> Thank you! Your review has been posted.
+        </div>
+        <div class="review-error" id="review-error">
+          Please fill in your name, pick a star rating, and write a review.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <p class="section-label center">Find Us</p>
+      <h2 class="center">Come Visit or Call to Order</h2>
+
+      <div class="contact-layout">
+
+        <!-- Info cards -->
+        <div class="contact-info-centered">
+          <div class="info-item">
+            <span class="info-icon">&#128205;</span>
+            <div>
+              <strong>Address</strong>
+              <p>3968 FL-4<br>Jay, FL 32565</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#128222;</span>
+            <div>
+              <strong>Phone — Call to Order</strong>
+              <p>850-675-5551</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#128337;</span>
+            <div>
+              <strong>Hours</strong>
+              <p>
+                Mon–Fri: 10 AM – 8:30 PM<br>
+                Saturday: Closed<br>
+                Sunday: 11 AM – 8:30 PM
+              </p>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">&#127869;</span>
+            <div>
+              <strong>Service</strong>
+              <p>Take-out &amp; Dine-in available</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-wrap">
+          <iframe
+            id="location-map"
+            src="https://maps.google.com/maps?q=3968+FL-4,+Jay,+FL+32565&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=3968+FL-4+Jay+FL+32565"
+            target="_blank"
+            rel="noopener"
+            class="map-directions-btn"
+          >&#128205; Get Directions</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">&#x9F99;</span>
+        <span class="logo-text">Jay Garden</span>
+        <p>Authentic Chinese cuisine. Take-out &amp; dine-in.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Quick Links</strong>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <strong>Follow Us</strong>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Yelp">y</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Jay Garden Chinese Restaurant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
