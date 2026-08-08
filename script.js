@@ -200,7 +200,10 @@ if (!sidebar) {
       <div class="cart-footer">
         <div class="cart-total-row">
           <strong>Subtotal</strong>
-          <span class="cart-total-price" id="cart-total">$0.00</span>
+          <div class="cart-total-right">
+            <span class="cart-total-price" id="cart-total">$0.00</span>
+            <span class="cart-no-tax">without tax</span>
+          </div>
         </div>
         <button class="cart-order-btn" id="cart-order-btn">&#128222; Place Order</button>
         <button class="cart-clear-btn" id="cart-clear-btn">Clear Order</button>

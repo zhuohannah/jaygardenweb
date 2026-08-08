@@ -1059,7 +1059,7 @@ section h2.center { margin-bottom: 44px; }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 60px;
   padding: 56px 24px;
   max-width: 1100px;
@@ -1431,6 +1431,17 @@ section h2.center { margin-bottom: 44px; }
   margin-bottom: 16px;
 }
 .cart-total-row strong { font-size: 0.95rem; color: var(--dark); }
+.cart-total-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+.cart-no-tax {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-style: italic;
+}
 .cart-total-price {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
